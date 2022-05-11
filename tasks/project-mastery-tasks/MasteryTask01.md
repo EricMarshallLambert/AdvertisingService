@@ -44,13 +44,13 @@ customer. Instead we return an empty string so that the front-end can handle ren
 
 **Exit Checklist:**
 
-* You've updated `AdvertisementSelectionLogic`'s `selectAdvertisement` method so that it randomly selects an ad that the 
-customer is eligible for 
 * You've updated `TargetingEvaluator`'s `evaluate` method to use a stream instead of a for loop to evaluate the 
 `TargetingPredicateResult`.
-* You've set both `AdvertisementSelectionLogic` and `TargetingEvaluator`‘s `IMPLEMENTED_STREAM` boolean flag to `true`.
 * You've updated `AddTargetingGroupActivity`'s `addTargetingGroup` method to use a stream when building the `Map` of
 spend categories to return.
+* You've set both `AddTargetingGroupActivity` and `TargetingEvaluator`‘s `IMPLEMENTED_STREAM` boolean flag to `true`.
+* You've updated `AdvertisementSelectionLogic`'s `selectAdvertisement` method so that it randomly selects an ad that the 
+customer is eligible for 
 * Running the gradle command `./gradlew -q clean :test --tests com.tct.mastery.task1.MasteryTaskOneLogicTests` passes.
 * Running the gradle command `./gradlew -q clean :test --tests com.tct.introspection.MT1IntrospectionTests` passes.
 
