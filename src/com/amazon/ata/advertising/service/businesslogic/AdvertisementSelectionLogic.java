@@ -71,7 +71,7 @@ public class AdvertisementSelectionLogic {
                     new TargetingEvaluator(new RequestContext(customerId, marketplaceId));
 
             if (CollectionUtils.isNotEmpty(contents)) {
-                // what if the collection of TargetingGroups is empty
+                //todo what if the collection of TargetingGroups is empty?
                 List<AdvertisementContent> eligibleAdvertisements = contents.stream()
                         .filter(advertisementContent -> targetingGroupDao.get(advertisementContent.getContentId())
                                 .stream()
